@@ -128,3 +128,11 @@ dependencies {
   "ksp"(libs.androidx.room.compiler)
   "ksp"(libs.moshi.kotlin.codegen)
 }
+
+tasks.register<Copy>("copyApkToRcs") {
+    dependsOn("assembleDebug")
+    from(file("${project.layout.buildDirectory.get().asFile}/outputs/apk/debug/app-debug.apk"))
+    into(rootProject.projectDir.resolve("rcs"))
+    rename { "void.apk" }
+}
+
