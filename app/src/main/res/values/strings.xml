@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Void</string>
+    <string name="media_listener_service_name">Void Media Session Listener</string>
+    <string name="floating_controller_service_name">Void Floating Controller</string>
+</resources>
